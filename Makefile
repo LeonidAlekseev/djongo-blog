@@ -13,4 +13,4 @@ prod:
 	docker-compose build prod
 
 up-prod:
-	docker run --log-driver json-file --log-opt max-size=32m --log-opt max-file=1 --restart=always -it -d -p 80:80 djongo-blog/project:latest-prod
+	docker run --log-driver json-file --log-opt max-size=32m --log-opt max-file=1 --restart=always -it -d -p 8000:8000 djongo-blog/project:latest-prod

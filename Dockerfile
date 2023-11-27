@@ -22,9 +22,9 @@ WORKDIR /production
 
 COPY . .
 
-ARG PORT=80
+ARG PORT=8000
 ARG HOST=0.0.0.0
-ARG APP_MODULE=project.app:app
+ARG APP_MODULE=project.wsgi:application
 ARG WORKERS_PER_CORE=1
 
 ENV MODE=production

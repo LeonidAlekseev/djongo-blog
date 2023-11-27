@@ -4,7 +4,7 @@ services:
   dev:
     image: djongo-blog/project:latest-dev
     working_dir: /home/project
-    entrypoint: gunicorn --workers 1 --threads 1 --reload --log-level debug -b 0.0.0.0 project.app:app
+    entrypoint: gunicorn --workers 1 --threads 1 --reload --log-level debug -b 0.0.0.0 project.wsgi:application
     build: 
       target: development
       context: .
@@ -13,10 +13,12 @@ services:
       - 8000:8000
     volumes:
       - .:/home/project
-    
+
+    env_file:
+      - ./envs/development.env
     environment: 
       - MODE=development
-      
+
     logging:
       driver: "json-file"
       options:
@@ -31,6 +33,9 @@ services:
       context: .
       dockerfile: Dockerfile
       
+    env_file:
+      - ./envs/production.env
+
     logging:
       driver: "json-file"
       options:
