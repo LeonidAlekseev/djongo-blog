@@ -1,0 +1,38 @@
+version: "3.8"
+
+services: 
+  dev:
+    image: djongo-blog/project:latest-dev
+    working_dir: /home/project
+    entrypoint: gunicorn --workers 1 --threads 1 --reload --log-level debug -b 0.0.0.0 project.app:app
+    build: 
+      target: development
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+      - 8000:8000
+    volumes:
+      - .:/home/project
+    
+    environment: 
+      - MODE=development
+      
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "1"
+        max-size: "32m"
+  
+  prod:
+    image: djongo-blog/project:latest-prod
+    working_dir: /production/project
+    build: 
+      target: production
+      context: .
+      dockerfile: Dockerfile
+      
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "1"
+        max-size: "32m"
