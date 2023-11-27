@@ -176,7 +176,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Распространяется по лицензии Apache 2.0. Смотрите `LICENSE` для получения дополнительной информации.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -215,7 +215,7 @@ Project Link: [https://github.com/LeonidAlekseev/djongo-blog](https://github.com
 [issues-shield]: https://img.shields.io/github/issues/LeonidAlekseev/djongo-blog.svg?style=for-the-badge
 [issues-url]: https://github.com/LeonidAlekseev/djongo-blog/issues
 [license-shield]: https://img.shields.io/github/license/LeonidAlekseev/djongo-blog.svg?style=for-the-badge
-[license-url]: https://github.com/LeonidAlekseev/djongo-blog/blob/master/LICENSE.txt
+[license-url]: https://github.com/LeonidAlekseev/djongo-blog/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: images/screenshot.png
