@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for post in object_list %}
+        <div style="margin-top: 1%">
+            <div class="post-entry">
+                <div class="bg-image card shadow-1-strong"
+                     style="background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(106,68,76,1) 100%);">
+                    <div style="margin-left: 1%">
+                        <h2>{{ post.title }}</h2>
+                        <p>{{ post.body }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+{% endblock content %}
