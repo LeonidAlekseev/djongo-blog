@@ -21,7 +21,7 @@
 <h3 align="center">Djongo Blog</h3>
 
   <p align="center">
-    Блог, основанный на Django с интеграцией Djongo для удобного использования MongoDB. Создавайте, управляйте и масштабируйте контент, обеспечивая высокую производительность благодаря гибкости MongoDB.
+    Блог, основанный на Django с интеграцией Djongo для удобного использования MongoDB. Создавайте, управляйте и масштабируйте контент, благодаря высокой производительности и гибкости MongoDB.
     <br />
     <a href="https://github.com/LeonidAlekseev/djongo-blog"><strong>Explore the docs »</strong></a>
     <br />
