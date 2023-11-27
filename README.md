@@ -197,11 +197,14 @@ Project Link: [https://github.com/LeonidAlekseev/djongo-blog](https://github.com
 
 
 <!-- Примечания -->
-## Примечания
+## Источники
 
-* []()
-* []()
-* []()
+* [Django](https://www.djangoproject.com)
+* [Djongo](https://www.djongomapper.com)
+* [MongoDB](https://www.mongodb.com)
+* [Docker](https://www.docker.com)
+* [Docker Compose](https://docs.docker.com/compose/)
+* [Makefile](https://habr.com/ru/articles/155201/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
