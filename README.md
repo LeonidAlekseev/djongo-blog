@@ -36,36 +36,36 @@
 
 
 
-<!-- TABLE OF CONTENTS -->
+<!-- Содержание -->
 <details>
-  <summary>Table of Contents</summary>
+  <summary>Контент</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#about-the-project">О проекте</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#built-with">На чём построено</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
+      <a href="#getting-started">Начало работы</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#prerequisites">Предварительные требования</a></li>
+        <li><a href="#installation">Загрузка</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#usage">Использование</a></li>
+    <li><a href="#roadmap">Дорожная карта</a></li>
+    <li><a href="#contributing">Вклад</a></li>
+    <li><a href="#license">Лицензия</a></li>
+    <li><a href="#contact">Контакты</a></li>
+    <li><a href="#acknowledgments">Примечания</a></li>
   </ol>
 </details>
 
 
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
+<!-- О проекте -->
+## О проекте
 
 [![Product Name Screen Shot][product-screenshot]](http://31.129.100.203:8999)
 
@@ -81,7 +81,7 @@
 
 
 
-### Built With
+### На чём построено
 
 * [![Next][Next.js]][Next-url]
 * [![React][React.js]][React-url]
@@ -96,32 +96,32 @@
 
 
 
-<!-- GETTING STARTED -->
-## Getting Started
+<!-- Начало работы -->
+## Начало работы
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Это пример того, как можно дать инструкции по локальной настройке проекта.
+Чтобы запустить локальную копию, выполните следующие простые действия.
 
-### Prerequisites
+### Предварительные требования
 
-This is an example of how to list things you need to use the software and how to install them.
+Это пример перечисления вещей, необходимых для работы с программой, и способов их установки.
 * npm
   ```sh
   npm install npm@latest -g
   ```
 
-### Installation
+### Загрузка
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Получите бесплатный API Key на [https://example.com](https://example.com)
+2. Клонируйте репозиторий
    ```sh
    git clone https://github.com/LeonidAlekseev/djongo-blog.git
    ```
-3. Install NPM packages
+3. Загрузите пакет NPM
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
+4. Введите ваш API в `config.js`
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
@@ -130,51 +130,51 @@ This is an example of how to list things you need to use the software and how to
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+<!-- Использование -->
+## Использование
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Используйте это пространство для демонстрации полезных примеров использования проекта. В этом пространстве хорошо смотрятся дополнительные скриншоты, примеры кода и демо-версии. Вы также можете дать ссылку на дополнительные ресурсы.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
-
-See the [open issues](https://github.com/LeonidAlekseev/djongo-blog/issues) for a full list of proposed features (and known issues).
+_Дополнительные примеры приведены в разделе [Документация](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-<!-- CONTRIBUTING -->
-## Contributing
+<!-- Дорожная карта -->
+## Дорожная карта
 
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+- [ ] Фича 1
+- [ ] Фича 2
+- [ ] Фича 3
+    - [ ] Наследуемая фича
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Полный список предлагаемых возможностей (и известных проблем) см. в разделе [Открытые вопросы](https://github.com/LeonidAlekseev/djongo-blog/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-<!-- LICENSE -->
-## License
+<!-- Вклад -->
+## Вклад
+
+Вклад - это то, что делает сообщество разработчиков открытого кода таким удивительным местом для обучения, вдохновения и творчества. Любой ваш вклад будет **очень высоко оценен**.
+
+Если у вас есть предложение, которое позволит сделать это лучше, пожалуйста, сделайте форк репозитория и создайте запрос на исправление. Вы также можете просто открыть проблему с тегом "улучшение".
+Не забудьте поставить проекту звезду! Еще раз спасибо!
+
+1. Форк проекта
+2. Создайте свою ветку Feature (`git checkout -b feature/AmazingFeature`)
+3. Зафиксируйте свои изменения (`git commit -m 'Add some AmazingFeature'`)
+4. Переместите изменения в ветку (`git push origin feature/AmazingFeature`)
+5. Открыть Pull Request
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- ЛИЦЕНЗИЯ -->
+## Лицензия
 
 Распространяется по лицензии Apache 2.0. Смотрите `LICENSE` для получения дополнительной информации.
 
@@ -182,10 +182,13 @@ Don't forget to give the project a star! Thanks again!
 
 
 
-<!-- CONTACT -->
-## Contact
+<!-- Контакты -->
+## Контакты (Телеграм)
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
+Леонид - [@mister_lil](https://t.me/mister_lil)
+Саша - [@apoyka](https://t.me/apoyka)
+Кирилл - [@ontologic](https://t.me/ontologic)
+Антон - [@apossya](https://t.me/apossya)
 
 Project Link: [https://github.com/LeonidAlekseev/djongo-blog](https://github.com/LeonidAlekseev/djongo-blog)
 
@@ -193,8 +196,8 @@ Project Link: [https://github.com/LeonidAlekseev/djongo-blog](https://github.com
 
 
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+<!-- Примечания -->
+## Примечания
 
 * []()
 * []()
