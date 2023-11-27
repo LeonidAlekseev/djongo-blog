@@ -82,7 +82,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': os.environ.get("MONGODB_NAME"),
-        'HOST': f'mongodb+srv://{os.environ.get("MONGODB_USER")}:{os.environ.get("MONGODB_PASSWORD")}@{os.environ.get("MONGODB_CLUSTER")}.mongodb.net/test?retryWrites=true',
+        'HOST': os.environ.get("MONGODB_HOST"),
         'USER': os.environ.get("MONGODB_USER"),
         'PASSWORD': os.environ.get("MONGODB_PASSWORD"),
     }

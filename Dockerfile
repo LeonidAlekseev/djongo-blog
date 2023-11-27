@@ -22,6 +22,8 @@ WORKDIR /production
 
 COPY . .
 
+WORKDIR /production/project
+
 ARG PORT=8000
 ARG HOST=0.0.0.0
 ARG APP_MODULE=project.wsgi:application
@@ -34,5 +36,3 @@ ENV HOST=${HOST}
 ENV PORT=${PORT}
 
 EXPOSE ${PORT}
-
-ENTRYPOINT [ "./scripts/start.sh" ]

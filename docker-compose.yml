@@ -12,7 +12,7 @@ services:
     ports: 
       - 8000:8000
     volumes:
-      - .:/home/project
+      - ./project:/home/project
 
     env_file:
       - ./envs/development.env
@@ -28,13 +28,18 @@ services:
   prod:
     image: djongo-blog/project:latest-prod
     working_dir: /production/project
+    entrypoint: gunicorn --workers 4 --threads 4 -b 0.0.0.0 project.wsgi:application
     build: 
       target: production
       context: .
       dockerfile: Dockerfile
+    ports: 
+      - 8000:8000
       
     env_file:
       - ./envs/production.env
+    environment: 
+      - MODE=production
 
     logging:
       driver: "json-file"
