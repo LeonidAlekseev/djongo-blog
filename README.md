@@ -3,11 +3,11 @@
 
 
 <!-- PROJECT SHIELDS -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+[![Вклады][contributors-shield]][contributors-url]
+[![Форки][forks-shield]][forks-url]
+[![Старгейзеры][stars-shield]][stars-url]
+[![Проблемы][issues-shield]][issues-url]
+[![Лицензия][license-shield]][license-url]
 
 
 
@@ -26,11 +26,11 @@
     <a href="https://github.com/LeonidAlekseev/djongo-blog"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="http://31.129.100.203:8999">View Demo</a>
+    <a href="http://31.129.100.203:8999">Посмотреть демо</a>
     ·
-    <a href="https://github.com/LeonidAlekseev/djongo-blog/issues">Report Bug</a>
+    <a href="https://github.com/LeonidAlekseev/djongo-blog/issues">Доложить о баге</a>
     ·
-    <a href="https://github.com/LeonidAlekseev/djongo-blog/issues">Request Feature</a>
+    <a href="https://github.com/LeonidAlekseev/djongo-blog/issues">Предложить изменение</a>
   </p>
 </div>
 
