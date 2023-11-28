@@ -205,7 +205,6 @@ Project Link: [https://github.com/LeonidAlekseev/djongo-blog](https://github.com
 * [Docker](https://www.docker.com)
 * [Docker Compose](https://docs.docker.com/compose/)
 * [Makefile](https://habr.com/ru/articles/155201/)
-* [Подготовка к использованию Django с MongoDB](https://medium.com/@dennisivy/read-this-before-using-mongodb-with-django-879927ce1ef)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
