@@ -185,12 +185,12 @@ _Дополнительные примеры приведены в раздел�
 <!-- Контакты -->
 ## Контакты (Телеграм)
 
-Леонид - [@mister_lil](https://t.me/mister_lil)
-Саша - [@apoyka](https://t.me/apoyka)
-Кирилл - [@ontologic](https://t.me/ontologic)
-Антон - [@apossya](https://t.me/apossya)
+* Леонид - [@mister_lil](https://t.me/mister_lil)
+* Александра - [@apoyka](https://t.me/apoyka)
+* Кирилл - [@ontologic](https://t.me/ontologic)
+* Антон - [@apossya](https://t.me/apossya)
 
-Project Link: [https://github.com/LeonidAlekseev/djongo-blog](https://github.com/LeonidAlekseev/djongo-blog)
+Ссылка на проект: [https://github.com/LeonidAlekseev/djongo-blog](https://github.com/LeonidAlekseev/djongo-blog)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
