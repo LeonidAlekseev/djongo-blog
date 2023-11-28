@@ -1,16 +1,14 @@
-.PHONY: build dev up-dev prod up-prod
+.PHONY: dev prod up-dev up-prod
 
-
-build: dev prod
 
 dev:
-	docker-compose build dev
-
-up-dev:
-	docker-compose up dev
+	docker-compose --env-file ./envs/docker-compose.env build mongodb dev dev-nginx
 
 prod:
-	docker-compose build prod
+	docker-compose --env-file ./envs/docker-compose.env build mongodb prod prod-nginx
+
+up-dev:
+	docker-compose --env-file ./envs/docker-compose.env up mongodb dev dev-nginx
 
 up-prod:
-	docker-compose up -d prod
+	docker-compose --env-file ./envs/docker-compose.env up -d mongodb prod prod-nginx

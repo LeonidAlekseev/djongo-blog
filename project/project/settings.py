@@ -29,18 +29,20 @@ DEBUG = bool(os.environ.get("DEBUG", default=0))
 
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS").split(" ")
 
+CSRF_TRUSTED_ORIGINS = os.environ.get("CSRF_TRUSTED_ORIGINS").split(" ")
+
 
 # Application definition
 
 INSTALLED_APPS = [
+    'blog',
+    'djongo',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'djongo',
-    'blog'
 ]
 
 MIDDLEWARE = [
@@ -81,10 +83,13 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': os.environ.get("MONGODB_NAME"),
-        'HOST': os.environ.get("MONGODB_HOST"),
-        'USER': os.environ.get("MONGODB_USER"),
-        'PASSWORD': os.environ.get("MONGODB_PASSWORD"),
+        'ENFORCE_SCHEMA': bool(os.environ.get("MONGO_ENFORCE_SCHEMA", 1)),
+        'HOST': os.environ.get("MONGO_HOST", "mongodb"),
+        'PORT': int(os.environ.get("MONGO_PORT", 27017)),
+        'NAME': os.environ.get("MONGO_NAME"),
+        'CLIENT': {
+            'host': f'{os.environ.get("MONGO_HOST")}/{os.environ.get("MONGO_NAME")}?retryWrites=true&w=majority'
+        }  
     }
 }
 
@@ -125,9 +130,14 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATIC_ROOT = BASE_DIR / 'static'
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [
+    BASE_DIR / 'admin' / 'static',
+    BASE_DIR / 'blog' / 'static',
+]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
