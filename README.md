@@ -26,9 +26,9 @@
     <a href="https://github.com/LeonidAlekseev/djongo-blog"><strong>Изучить документацию »</strong></a>
     <br />
     <br />
-    <a href="http://31.129.100.203:8999">Посмотреть демо</a>
+    <a href="http://31.129.100.203:8080">Посмотреть демо</a>
     ·
-    <a href="https://github.com/LeonidAlekseev/djongo-blog/issues">Доложить о баге</a>
+    <a href="https://github.com/LeonidAlekseev/djongo-blog/issues">Сообщить о баге</a>
     ·
     <a href="https://github.com/LeonidAlekseev/djongo-blog/issues">Предложить изменение</a>
   </p>
@@ -67,7 +67,7 @@
 <!-- О проекте -->
 ## О проекте
 
-[![Product Name Screen Shot][product-screenshot]](http://31.129.100.203:8999)
+[![Product Name Screen Shot][product-screenshot]](http://31.129.100.203:8080)
 
 Наш блог — это инновационная платформа, созданная на основе фреймворка Django с использованием Djongo для интеграции с MongoDB. Это не просто обычный блог: мы стремимся к созданию уникального пространства, где контент создается, управляется и отображается с невероятной легкостью и эффективностью. Используя преимущества Django вместе с гибкостью MongoDB, мы создали окружение, которое позволяет пользователям не только создавать контент, но и масштабировать его, обеспечивая уникальный опыт для каждого читателя.
 <br />
