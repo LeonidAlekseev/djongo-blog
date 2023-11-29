@@ -136,7 +136,6 @@ STATIC_ROOT = BASE_DIR / 'static'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'admin' / 'static',
     BASE_DIR / 'blog' / 'static',
 ]
 
