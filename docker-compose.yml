@@ -67,7 +67,7 @@ services:
       - frontend
       - backend
 
-  dev-nginx:
+  nginx-dev:
     image: djongo-blog/nginx:1.25-dev
     build: 
       context: .
@@ -84,7 +84,7 @@ services:
     networks:
       - frontend
 
-  prod-nginx:
+  nginx-prod:
     image: djongo-blog/nginx:1.25-prod
     restart: always
     build: 
