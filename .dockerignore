@@ -168,6 +168,10 @@ cython_debug/
 *.md
 LICENSE
 mongodb/
+nginx/**/*
 nginx/
+assets/**/*
 assets/
+project/static/**/*
+project/static
 Makefile
