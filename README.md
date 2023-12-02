@@ -43,7 +43,7 @@
     <li>
       <a href="#about-the-project">О проекте</a>
       <ul>
-        <li><a href="#built-with">На чём построено</a></li>
+        <li><a href="#built-with">Технологический стек</a></li>
       </ul>
     </li>
     <li>
@@ -76,6 +76,20 @@
 <br />
 <br />
 Использование Djongo и MongoDB также дает нам преимущество в производительности. Благодаря высокой скорости работы MongoDB и эффективной интеграции с Django, мы можем обрабатывать большие объемы данных, обеспечивая быструю загрузку страниц и отзывчивость блога. Помимо этого, мы постоянно работаем над улучшением функционала блога, и наша конфигурация позволяет легко внедрять новые функции и развивать проект, чтобы соответствовать изменяющимся потребностям наших читателей и авторов контента.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<p id="built-with"></p>
+### Технологический стек
+
+[![Docker][Docker.com]][Docker-url]
+[![MongoDB][MongoDB.com]][MongoDB-url]
+[![Python][Python.org]][Python-url]
+[![Django][Django.com]][Django-url]
+[![Javascript][Javascript.js]][Javascript-url]
+[![JQuery][JQuery.com]][JQuery-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -227,6 +241,18 @@ _Дополнительные примеры приведены в раздел�
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: assets/screenshot.png
+[Docker.com]: https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white
+[Docker-url]: https://docker.com/
+[MongoDB.com]: https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white
+[MongoDB-url]: https://mongodb.com/
+[Python.org]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
+[Python-url]: https://python.org/
+[Django.com]: https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white
+[Django-url]: https://djangoproject.com/
+[Javascript.com]: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
+[Javascript-url]: https://https://www.javascript.com/
+[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
+[JQuery-url]: https://jquery.com/
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
@@ -241,5 +267,3 @@ _Дополнительные примеры приведены в раздел�
 [Laravel-url]: https://laravel.com
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
