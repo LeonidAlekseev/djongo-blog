@@ -81,7 +81,7 @@
 
 
 
-<p id="built-with"></p>
+<a name="built-with"></a>
 ### Технологический стек
 
 [![Docker][Docker.com]][Docker-url]
