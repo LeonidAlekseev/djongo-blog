@@ -41,24 +41,24 @@
   <summary>Контент</summary>
   <ol>
     <li>
-      <a href="#about-the-project">О проекте</a>
+      <a href="#о-проекте">О проекте</a>
       <ul>
-        <li><a href="#built-with">Технологический стек</a></li>
+        <li><a href="#технологический-стек">Технологический стек</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Начало работы</a>
+      <a href="#начало-работы">Начало работы</a>
       <ul>
-        <li><a href="#prerequisites">Предварительные требования</a></li>
-        <li><a href="#installation">Загрузка</a></li>
+        <li><a href="#предварительные-требования">Предварительные требования</a></li>
+        <li><a href="#установка">Установка</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Использование</a></li>
-    <li><a href="#roadmap">Дорожная карта</a></li>
-    <li><a href="#contributing">Содействие</a></li>
-    <li><a href="#license">Лицензия</a></li>
-    <li><a href="#contact">Контакты</a></li>
-    <li><a href="#acknowledgments">Примечания</a></li>
+    <li><a href="#использование">Использование</a></li>
+    <li><a href="#дорожная-карта">Дорожная карта</a></li>
+    <li><a href="#содействие">Содействие</a></li>
+    <li><a href="#лицензия">Лицензия</a></li>
+    <li><a href="#контакты">Контакты</a></li>
+    <li><a href="#примечания">Примечания</a></li>
   </ol>
 </details>
 
@@ -81,7 +81,6 @@
 
 
 
-<a name="built-with"></a>
 ### Технологический стек
 
 [![Docker][Docker.com]][Docker-url]
@@ -105,7 +104,7 @@
 Для запуска локальной копии необходимо установить Docker согласно [официальной инструкции](https://docs.docker.com/engine/install/).
 _Docker version 24.0.6 протестирован. Остерегайтесь более старых версий._
 
-### Загрузка
+### Установка
 
 1. Клонируйте репозиторий
    ```sh
@@ -215,12 +214,15 @@ _Дополнительные примеры приведены в раздел�
 <!-- Примечания -->
 ## Источники
 
-* [Django](https://www.djangoproject.com)
-* [Djongo](https://www.djongomapper.com)
-* [MongoDB](https://www.mongodb.com)
-* [Docker](https://www.docker.com)
-* [Docker Compose](https://docs.docker.com/compose/)
-* [Makefile](https://habr.com/ru/articles/155201/)
+* [Docker](https://docker.com)
+* [Docker Compose](https://docs.docker.com/compose)
+* [Makefile](https://wikipedia.org/wiki/Makefile)
+* [MongoDB](https://mongodb.com)
+* [Python](https://python.org)
+* [Django](https://djangoproject.com)
+* [Djongo](https://djongomapper.com)
+* [Javascript](https://javascript.com)
+* [JQuery](https://jquery.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
