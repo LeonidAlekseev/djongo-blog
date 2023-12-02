@@ -37,8 +37,8 @@
 
 
 <!-- Содержание -->
-<details>
-  <summary>Контент</summary>
+<details open>
+  <summary>Содержание</summary>
   <ol>
     <li>
       <a href="#о-проекте">О проекте</a>
