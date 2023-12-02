@@ -171,6 +171,7 @@ _Дополнительные примеры приведены в раздел�
     - [x] Main page
     - [x] Admin panel
     - [ ] Pagination
+    - [ ] Authorization
     - [ ] Registration
     - [ ] Authentication
     - [ ] Translator
