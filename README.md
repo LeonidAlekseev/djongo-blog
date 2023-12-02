@@ -265,7 +265,7 @@ _Дополнительные примеры приведены в раздел�
 * [Javascript](https://javascript.com)
 * [JQuery](https://jquery.com)
 * [PyTorch](https://pytorch.org)
-* [snnTorch](https://snntorch.readthedocs.io)
+* [SNNTorch](https://snntorch.readthedocs.io)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
