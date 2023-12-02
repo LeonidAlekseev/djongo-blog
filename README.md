@@ -2,7 +2,7 @@
 
 
 
-<!-- PROJECT SHIELDS -->
+<!-- Значки -->
 [![Участники][contributors-shield]][contributors-url]
 [![Форки][forks-shield]][forks-url]
 [![Звезды][stars-shield]][stars-url]
@@ -11,7 +11,7 @@
 
 
 
-<!-- PROJECT LOGO -->
+<!-- Титульник -->
 <br />
 <div align="center">
   <a href="https://github.com/LeonidAlekseev/djongo-blog">
@@ -58,7 +58,7 @@
     <li><a href="#содействие">Содействие</a></li>
     <li><a href="#лицензия">Лицензия</a></li>
     <li><a href="#контакты">Контакты</a></li>
-    <li><a href="#примечания">Примечания</a></li>
+    <li><a href="#источники">Источники</a></li>
   </ol>
 </details>
 
@@ -215,7 +215,7 @@ _Дополнительные примеры приведены в раздел�
 
 
 
-<!-- ЛИЦЕНЗИЯ -->
+<!-- Лицензия -->
 ## Лицензия
 
 Распространяется по лицензии Apache 2.0. Смотрите `LICENSE` для получения дополнительной информации.
@@ -238,7 +238,7 @@ _Дополнительные примеры приведены в раздел�
 
 
 
-<!-- Примечания -->
+<!-- Источники -->
 ## Источники
 
 * [Docker](https://docker.com)
@@ -255,7 +255,7 @@ _Дополнительные примеры приведены в раздел�
 
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
+<!-- Разметка -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/LeonidAlekseev/djongo-blog.svg?style=for-the-badge
 [contributors-url]: https://github.com/LeonidAlekseev/djongo-blog/graphs/contributors
