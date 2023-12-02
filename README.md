@@ -89,6 +89,7 @@
 [![Django][Django.com]][Django-url]
 [![Javascript][Javascript.com]][Javascript-url]
 [![JQuery][JQuery.com]][JQuery-url]
+[![PyTorch][PyTorch.com]][PyTorch-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -171,17 +172,29 @@ _Дополнительные примеры приведены в раздел�
     - [x] Main page
     - [x] Admin panel
     - [ ] Pagination
+    - [ ] Translator
     - [ ] Authorization
     - [ ] Registration
+        - [ ] Ajax
     - [ ] Authentication
-    - [ ] Translator
+        - [ ] Ajax
     - [ ] Search
+        - [ ] Ajax
     - [ ] Account
+        - [ ] Full Name
+        - [ ] Avatar
+        - [ ] Edit
 - [ ] Машинное обучение
-    - [x] Main page
-    - [ ] Polynomial Regression 
+    - [ ] Recurrent Neural Network
+        - [ ] Process data
+        - [ ] Model training
+        - [ ] Building pipeline
+        - [ ] Integration
     - [ ] Spiking Neural Network
-    - [ ] Integration
+        - [ ] Data processing
+        - [ ] Model training
+        - [ ] Building pipeline
+        - [ ] Integration
 
 Полный список предлагаемых возможностей и известных проблем в разделе [Открытые вопросы](https://github.com/LeonidAlekseev/djongo-blog/issues).
 
@@ -242,7 +255,7 @@ _Дополнительные примеры приведены в раздел�
 <!-- Источники -->
 ## Источники
 
-* [Docker](https://docker.com)
+* [Docker](Docker-url)
 * [Docker Compose](https://docs.docker.com/compose)
 * [Makefile](https://wikipedia.org/wiki/Makefile)
 * [MongoDB](https://mongodb.com)
@@ -251,6 +264,7 @@ _Дополнительные примеры приведены в раздел�
 * [Djongo](https://djongomapper.com)
 * [Javascript](https://javascript.com)
 * [JQuery](https://jquery.com)
+* [PyTorch](https://pytorch.org/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -283,6 +297,8 @@ _Дополнительные примеры приведены в раздел�
 [Javascript-url]: https://https://www.javascript.com/
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com/
+[PyTorch.com]: https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white
+[PyTorch-url]: https://pytorch.org/
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
