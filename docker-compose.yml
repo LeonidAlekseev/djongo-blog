@@ -7,8 +7,6 @@ services:
     build: 
       context: .
       dockerfile: ./mongodb/Dockerfile
-    env_file:
-      - ./envs/mongodb.env
     ports:
       - 27017:27017
     networks:
@@ -18,7 +16,12 @@ services:
     image: djongo-blog/project:latest-dev
     working_dir: /home/project
     command: >
-      bash -c "python3 ./manage.py migrate --no-input && python3 ./manage.py collectstatic --no-input && gunicorn --workers 1 --threads 1 --reload --log-level debug -b ${DJANGO_IP}:${DJANGO_PORT} ${GUNICORN_APPLICATION}"
+      bash -c "
+        python3 ./manage.py migrate --no-input &&
+        python3 ./manage.py collectstatic --no-input &&
+        python3 ./manage.py createsuperuser --no-input --username ${DJANGO_SUPERUSER_USERNAME} &&
+        gunicorn --workers 1 --threads 1 --reload --log-level debug -b ${DJANGO_IP}:${DJANGO_PORT} ${GUNICORN_APPLICATION}
+      "
     build: 
       target: development
       context: .
@@ -28,7 +31,6 @@ services:
     volumes:
       - ./project:/home/project
     env_file:
-      - ./envs/mongodb.env
       - ./envs/development.env
     depends_on:
       - mongodb
@@ -46,7 +48,12 @@ services:
     restart: always
     working_dir: /production/project
     command: >
-      bash -c "python3 ./manage.py migrate --no-input && python3 ./manage.py collectstatic --no-input && gunicorn --workers 4 --threads 4 -b ${DJANGO_IP}:${DJANGO_PORT} ${GUNICORN_APPLICATION}"
+      bash -c "
+        python3 ./manage.py migrate --no-input &&
+        python3 ./manage.py collectstatic --no-input &&
+        python3 ./manage.py createsuperuser --no-input --username ${DJANGO_SUPERUSER_USERNAME} &&
+        gunicorn --workers 4 --threads 4 -b ${DJANGO_IP}:${DJANGO_PORT} ${GUNICORN_APPLICATION}
+      "
     build: 
       target: production
       context: .
@@ -54,7 +61,6 @@ services:
     expose:
       - "${DJANGO_PORT}"
     env_file:
-      - ./envs/mongodb.env
       - ./envs/production.env
     depends_on:
       - mongodb
