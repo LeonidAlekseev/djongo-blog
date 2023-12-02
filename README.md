@@ -18,7 +18,7 @@
     <img src="assets/logo.png" alt="Logo" height="80">
   </a>
 
-<h3 align="center">Djongo Blog</h3>
+  <h3 align="center">Djongo Blog</h3>
 
   <p align="center">
     Блог, основанный на Django с интеграцией Djongo для удобного использования MongoDB. Создавайте, управляйте и масштабируйте контент, благодаря высокой производительности и гибкости MongoDB.
@@ -102,7 +102,7 @@
 
 ### Предварительные требования
 
-Для запуска локальной копии необходимо установить Docker согласно [официальной инструкции](https://docs.docker.com/engine/install/).
+Для запуска локальной копии необходимо установить Docker согласно [официальной инструкции](https://docs.docker.com/engine/install).
 _Docker version 24.0.6 протестирован. Остерегайтесь более старых версий._
 
 ### Установка
@@ -255,7 +255,7 @@ _Дополнительные примеры приведены в раздел�
 <!-- Источники -->
 ## Источники
 
-* [Docker](Docker-url)
+* [Docker](https://docker.com)
 * [Docker Compose](https://docs.docker.com/compose)
 * [Makefile](https://wikipedia.org/wiki/Makefile)
 * [MongoDB](https://mongodb.com)
@@ -264,7 +264,8 @@ _Дополнительные примеры приведены в раздел�
 * [Djongo](https://djongomapper.com)
 * [Javascript](https://javascript.com)
 * [JQuery](https://jquery.com)
-* [PyTorch](https://pytorch.org/)
+* [PyTorch](https://pytorch.org)
+* [snnTorch](https://snntorch.readthedocs.io)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -286,29 +287,29 @@ _Дополнительные примеры приведены в раздел�
 [linkedin-url]: https://linkedin.com/in/linkedin_username
 [product-screenshot]: assets/screenshot.png
 [Docker.com]: https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white
-[Docker-url]: https://docker.com/
+[Docker-url]: https://docker.com
 [MongoDB.com]: https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white
-[MongoDB-url]: https://mongodb.com/
+[MongoDB-url]: https://mongodb.com
 [Python.org]: https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54
-[Python-url]: https://python.org/
+[Python-url]: https://python.org
 [Django.com]: https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white
-[Django-url]: https://djangoproject.com/
+[Django-url]: https://djangoproject.com
 [Javascript.com]: https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E
-[Javascript-url]: https://https://www.javascript.com/
+[Javascript-url]: https://javascript.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com/
+[JQuery-url]: https://jquery.com
 [PyTorch.com]: https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white
-[PyTorch-url]: https://pytorch.org/
+[PyTorch-url]: https://pytorch.org
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
+[Next-url]: https://nextjs.org
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
+[React-url]: https://reactjs.org
 [Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
+[Vue-url]: https://vuejs.org
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
+[Angular-url]: https://angular.io
 [Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
+[Svelte-url]: https://svelte.dev
 [Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
 [Laravel-url]: https://laravel.com
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
