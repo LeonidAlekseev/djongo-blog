@@ -88,7 +88,7 @@
 [![MongoDB][MongoDB.com]][MongoDB-url]
 [![Python][Python.org]][Python-url]
 [![Django][Django.com]][Django-url]
-[![Javascript][Javascript.js]][Javascript-url]
+[![Javascript][Javascript.com]][Javascript-url]
 [![JQuery][JQuery.com]][JQuery-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
