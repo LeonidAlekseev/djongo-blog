@@ -19,7 +19,7 @@ services:
       bash -c "
         python3 ./manage.py migrate --no-input &&
         python3 ./manage.py collectstatic --no-input &&
-        python3 ./manage.py createsuperuser --no-input --username ${DJANGO_SUPERUSER_USERNAME} &&
+        python3 ./manage.py setsuperuser --no-input --username ${DJANGO_SUPERUSER_USERNAME} --password ${DJANGO_SUPERUSER_PASSWORD} &&
         gunicorn --workers 1 --threads 1 --reload --log-level debug -b ${DJANGO_IP}:${DJANGO_PORT} ${GUNICORN_APPLICATION}
       "
     build: 
@@ -51,7 +51,7 @@ services:
       bash -c "
         python3 ./manage.py migrate --no-input &&
         python3 ./manage.py collectstatic --no-input &&
-        python3 ./manage.py createsuperuser --no-input --username ${DJANGO_SUPERUSER_USERNAME} &&
+        python3 ./manage.py setsuperuser --no-input --username ${DJANGO_SUPERUSER_USERNAME} --password ${DJANGO_SUPERUSER_PASSWORD} &&
         gunicorn --workers 4 --threads 4 -b ${DJANGO_IP}:${DJANGO_PORT} ${GUNICORN_APPLICATION}
       "
     build: 
@@ -85,7 +85,6 @@ services:
       - ./project/static:/srv/www/project/static
       - ./project/media:/srv/www/project/media
       - ./project/logs:/srv/www/project/logs
-      - ./nginx/dev:/etc/nginx/conf.d
     depends_on:
       - dev
     networks:
