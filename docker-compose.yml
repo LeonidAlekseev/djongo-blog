@@ -6,7 +6,7 @@ services:
     restart: always
     build: 
       context: .
-      dockerfile: ./mongodb/Dockerfile
+      dockerfile: ./dockers/mongodb/Dockerfile
     ports:
       - 27017:27017
     networks:
@@ -25,7 +25,7 @@ services:
     build: 
       target: development
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./dockers/project/Dockerfile
     expose:
       - "${DJANGO_PORT}"
     volumes:
@@ -57,7 +57,7 @@ services:
     build: 
       target: production
       context: .
-      dockerfile: Dockerfile
+      dockerfile: ./dockers/project/Dockerfile
     expose:
       - "${DJANGO_PORT}"
     env_file:
@@ -76,8 +76,9 @@ services:
   nginx-dev:
     image: djongo-blog/nginx:1.25-dev
     build: 
+      target: development
       context: .
-      dockerfile: ./nginx/dev/Dockerfile
+      dockerfile: ./dockers/nginx/Dockerfile
     ports:
       - "${NGINX_PORT}:80"
     volumes:
@@ -94,8 +95,9 @@ services:
     image: djongo-blog/nginx:1.25-prod
     restart: always
     build: 
+      target: production
       context: .
-      dockerfile: ./nginx/prod/Dockerfile
+      dockerfile: ./dockers/nginx/Dockerfile
     ports:
       - "${NGINX_PORT}:80"
     depends_on:
