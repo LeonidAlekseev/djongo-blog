@@ -110,9 +110,9 @@ _Docker version 24.0.6 протестирован. Остерегайтесь б
    ```sh
    git clone https://github.com/LeonidAlekseev/djongo-blog.git
    ```
-2. Настройте конфиги в `envs`
-3. Используйте `Makefile`
-    - Development сборка
+2. Настройте конфиги в папке `envs`
+3. Используйте `Makefile` для сборки
+    - Development
         - Build
         ```sh
         make dev
@@ -125,7 +125,7 @@ _Docker version 24.0.6 протестирован. Остерегайтесь б
         ```sh
         make down-dev
         ```
-    - Production сборка
+    - Production
         - Build
         ```sh
         make prod
