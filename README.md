@@ -111,15 +111,33 @@ _Docker version 24.0.6 протестирован. Остерегайтесь б
    git clone https://github.com/LeonidAlekseev/djongo-blog.git
    ```
 2. Настройте конфиги в `envs`
-3. Используйте `Makefile` для сборки
-   ```sh
-   make dev # Run Dev
-   make up-dev # Run Dev
-   make down-dev # Stop Dev
-   make prod # Build Prod
-   make up-prod # Run Prod
-   make down-prod # Stop Prod
-   ```
+3. Используйте `Makefile`
+    - Development сборка
+        - Build
+        ```sh
+        make dev
+        ```
+        - Up
+        ```sh
+        make up-dev
+        ```
+        - Down
+        ```sh
+        make down-dev
+        ```
+    - Production сборка
+        - Build
+        ```sh
+        make prod
+        ```
+        - Up
+        ```sh
+        make up-prod
+        ```
+        - Down
+        ```sh
+        make down-prod
+        ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
