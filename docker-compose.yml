@@ -17,6 +17,7 @@ services:
     working_dir: /home/project
     command: >
       bash -c "
+        python3 ./manage.py makemigrations --no-input &&
         python3 ./manage.py migrate --no-input &&
         python3 ./manage.py collectstatic --no-input &&
         python3 ./manage.py setsuperuser --no-input --username ${DJANGO_SUPERUSER_USERNAME} --password ${DJANGO_SUPERUSER_PASSWORD} &&
@@ -49,6 +50,7 @@ services:
     working_dir: /production/project
     command: >
       bash -c "
+        python3 ./manage.py makemigrations --no-input &&
         python3 ./manage.py migrate --no-input &&
         python3 ./manage.py collectstatic --no-input &&
         python3 ./manage.py setsuperuser --no-input --username ${DJANGO_SUPERUSER_USERNAME} --password ${DJANGO_SUPERUSER_PASSWORD} &&
