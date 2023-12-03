@@ -169,7 +169,5 @@ cython_debug/
 LICENSE
 assets/**/*
 assets/
-project/static/**/*
-project/static
 Makefile
 Dockerfile
