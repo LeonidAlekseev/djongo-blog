@@ -1,59 +1,101 @@
 <html lang="ru">
+
 <head>
-    <title>Блог о машинном обучении</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>The ъоъ</title>
+
+    <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&amp;display=swap" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+            }
+        }
+        .bg-animation {
+            background-image: url(/static/blog/title-animation.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+        }
+        .bg-animation-filter {
+            backdrop-filter: blur(1px) contrast(0.5) brightness(0.5);
+            -webkit-backdrop-filter: blur(1px) contrast(0.5) brightness(0.5);
+        }
+    </style>
+    <link href="/static/blog/main.css" rel="stylesheet">
 </head>
-<body>
-<!---https://cssgradient.io/--->
-<div class="g-image"
-     style="background: linear-gradient(90deg, rgba(86,85,106,1) 0%, rgba(182,182,187,1) 67%, rgba(86,85,106,1) 100%); background-size: 100%; width: 100%; height: 100%">
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/">Машинное обучение</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Переключатель навигации">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Главная</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/about">О блоге</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                               data-bs-toggle="dropdown" aria-expanded="false">
-                                Машинное обучение
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/stat">Статистические методы классификации</a></li>
-                                <li><a class="dropdown-item" href="/gray">Модели Грея</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="/imput">Импутация данных</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+
+<body cz-shortcut-listen="true">
+    
+    <div class="container" id="top">
+        <header class="blog-header py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+            <div class="col-4 pt-1">
+                <a class="link-secondary" href="https://github.com/LeonidAlekseev/djongo-blog">Содействие</a>
             </div>
-        </nav>
-    </header>
-    <div>
+            <div class="col-4 text-center">
+                <a class="blog-header-logo text-dark" href="/">THE ЪОЪ</a>
+            </div>
+            <div class="col-4 d-flex justify-content-end align-items-center">
+                <a class="link-secondary" href="#" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"></circle><path d="M21 21l-5.2-5.2"></path></svg>
+                </a>
+                <a class="btn btn-sm btn-outline-secondary" href="#">Аккаунт</a>
+            </div>
+            </div>
+        </header>
+
+        <div class="nav-scroller py-1 mb-2">
+            <nav class="nav d-flex justify-content-between">
+                <a class="p-2 link-secondary" href="/">Блог</a>
+                <a class="p-2 link-secondary" href="/rnn">Recurrent Neural Network</a>
+                <a class="p-2 link-secondary" href="/snn">Spiking Neural Network</a>
+                <a class="p-2 link-secondary" href="https://github.com/leonidAlekseev/djongo-blog">Github</a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container" style="min-height: 100vh;">
+        <div class="mb-4 text-white rounded overflow-hidden bg-dark bg-animation">
+        <div class="p-4 p-md-5 col-md-12 px-0 bg-animation-filter">
+            <h1 class="display-4 fst-italic">Уважаемые читатели</h1>
+            <p class="lead my-3">Наш проект существует только на средства добровольных пожертвований. А также за счет бесплатной рабочей силы студентов. Просим с уважением относиться к их труду и не стесняться содействовать в разработке.</p>
+        </div>
+        </div>
+
         {% block content %}
         {% endblock content %}
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-                crossorigin="anonymous"></script>
+    </main>
 
-    </div>
-</div>
+    <footer class="blog-footer">
+    <p>Пример для <a href="https://github.com/leonidAlekseev/djongo-blog">Djongo Blog</a>.</p>
+    <p>
+        <a href="#top">Наверх</a>
+    </p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+    </footer>
+
 </body>
+
 </html>
