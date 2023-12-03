@@ -89,6 +89,7 @@
 [![Django][Django.com]][Django-url]
 [![Javascript][Javascript.com]][Javascript-url]
 [![JQuery][JQuery.com]][JQuery-url]
+[![Bootstrap][Bootstrap.com]][Bootstrap-url]
 [![PyTorch][PyTorch.com]][PyTorch-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -264,6 +265,7 @@ _Дополнительные примеры приведены в раздел�
 * [Djongo](https://djongomapper.com)
 * [Javascript](https://javascript.com)
 * [JQuery](https://jquery.com)
+* [Bootstrap](https://getbootstrap.com)
 * [PyTorch](https://pytorch.org)
 * [SNNTorch](https://snntorch.readthedocs.io)
 
@@ -298,6 +300,8 @@ _Дополнительные примеры приведены в раздел�
 [Javascript-url]: https://javascript.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
 [PyTorch.com]: https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white
 [PyTorch-url]: https://pytorch.org
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
@@ -312,5 +316,3 @@ _Дополнительные примеры приведены в раздел�
 [Svelte-url]: https://svelte.dev
 [Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
 [Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
