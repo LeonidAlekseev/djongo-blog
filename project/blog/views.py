@@ -7,9 +7,9 @@ class BlogListView(ListView):
     template_name = 'home.html'
 
 
-class AboutPageView(TemplateView):
-    template_name = 'about.html'
+class RNNPageView(TemplateView):
+    template_name = 'rnn.html'
 
 
-class ImputPageView(TemplateView):
-    template_name = 'imput.html'
+class SNNPageView(TemplateView):
+    template_name = 'snn.html'
