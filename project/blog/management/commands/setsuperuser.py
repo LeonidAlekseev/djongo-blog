@@ -18,6 +18,9 @@ class Command(createsuperuser.Command):
 
         if password and not username:
             raise CommandError("--username is required if specifying --password")
-
-        super(Command, self).handle(*args, **options)
+        
+        try:
+            super(Command, self).handle(*args, **options)
+        except CommandError as e:
+            print(e)
         
