@@ -173,7 +173,7 @@ _Дополнительные примеры приведены в раздел�
     - [x] Main page
     - [x] Admin panel
     - [x] Pagination
-    - [ ] Translator
+    - [x] Translator
     - [ ] Authorization
     - [ ] Registration
         - [ ] Ajax
