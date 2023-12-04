@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container p-0 m-0">
+        <div class="text-white overflow-hidden bg-dark bg-animation">
+            <div class="row flex-nowrap justify-content-center align-items-center bg-animation-filter">
+                <div class="col-md-9 m-3">
+                    <h1 class="m-3 fs-2">Уважаемые читатели</h1>
+                    <p class="m-3 text-justify">Наш проект существует только на средства добровольных пожертвований. А также за счет бесплатной рабочей силы студентов. Просим с уважением относиться к их труду и не стесняться содействовать в разработке.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="container">
+        <div class="row">
+            {% for post in object_list %}
+                <div class="col-md-6 p-0 border-bottom{%if forloop.counter0|divisibleby:2 %} border-end{% endif %}">
+                    <div class="row g-0 m-4 overflow-hidden flex-md-row h-md-500 position-relative">
+                        <div class="col d-flex flex-column position-static">
+                            <strong class="mb-0 d-inline-block text-primary h-bold text-uppercase">{{ post.category }}</strong>
+                            <h3 class="mb-0 blog-title display-6 h-bold">{{ post.title }}</h3>
+                            <div class="mb-3 text-muted text-uppercase">{{ post.created_at_formatted }}</div>
+                            <p class="blog-body text-justify card-text mb-auto">{{ post.body }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}

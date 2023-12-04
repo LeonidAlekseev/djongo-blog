@@ -8,5 +8,9 @@ class Post(models.Model):
     created_at = models.DateTimeField(default=datetime.now)
     body = models.TextField()
 
+    @property
+    def created_at_formatted(self):
+        return self.created_at.strftime('%H:%M | %d.%m.%Y')
+
     def __str__(self):
         return self.title

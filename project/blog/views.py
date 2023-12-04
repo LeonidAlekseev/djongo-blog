@@ -1,10 +1,14 @@
 from django.views.generic import ListView, TemplateView
+from django.db import models
 from .models import Post
 
 
 class BlogListView(ListView):
+    template_name = 'blog.html'
     model = Post
-    template_name = 'home.html'
+
+class MLPageView(TemplateView):
+    template_name = 'ml.html'
 
 
 class RNNPageView(TemplateView):
