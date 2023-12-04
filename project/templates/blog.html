@@ -28,4 +28,33 @@
             {% endfor %}
         </div>
     </div>
+
+    <div class="container">
+        <div class="d-flex py-4">
+            <div class="pagination mx-auto">
+                {% if page_obj.has_previous %}
+                    <a class="pagination-element" href="?page=1">
+                        &laquo;
+                    <!-- <a class="pagination-element" href="?page={{ page_obj.previous_page_number }}">
+                    </a> -->
+                {% endif %}
+                {% for num in page_obj.paginator.page_range %}
+                    {% if page_obj.paginator.num_pages != 1 %}
+                        {% if page_obj.number == num %}
+                            <span class="pagination-element pagination-current">{{ num }}</span>
+                        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                            <a class="pagination-element" href="?page={{ num }}">{{ num }}</a>
+                        {% endif %}
+                        {% endif %}
+                {% endfor %}
+                {% if page_obj.has_next %}
+                    <!-- <a class="pagination-element" href="?page={{ page_obj.next_page_number }}">
+                    </a> -->
+                    <a class="pagination-element" href="?page={{ page_obj.paginator.num_pages }}">
+                        &raquo;
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
 {% endblock content %}

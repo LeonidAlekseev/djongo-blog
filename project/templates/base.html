@@ -26,6 +26,8 @@
         :root {
             --bs-primary-rgb: 21, 115, 162;
             --bs-secondary-rgb: 78, 77, 85;
+            --bs-link-color: #1573a2;
+            --bs-link-hover-color: #0c5478;
         }
         html {
             background-color: #f5efeb;
@@ -116,6 +118,9 @@
             backdrop-filter: blur(3px) brightness(0.33);
             -webkit-backdrop-filter: blur(3px) brightness(0.33);
         }
+        .pagination-element {
+            padding: 10px;
+        }
     </style>
     <link href="/static/blog/main.css" rel="stylesheet">
 </head>
@@ -159,8 +164,8 @@
                                             <input class="nav-flat px-3 text-white placeholder-white" type="text" placeholder="Поиск">
                                         </div>
                                         <div>
-                                            <button class="nav-flat px-3" type="submit">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-search" viewBox="0 0 16 16">
+                                            <button class="nav-flat px-3 text-white" type="submit">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                                                 </svg>
                                             </button>
