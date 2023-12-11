@@ -43,6 +43,7 @@
         }
         .navbar-dark {
             --bs-navbar-hover-color: #ffffff;
+            --bs-navbar-disabled-color: #ffffff;
         }
         html {
             background-color: #f5efeb;
@@ -185,7 +186,7 @@
                                     <a class="nav-link px-3{% if request.resolver_match.url_name == 'home' %} active{% endif %}" href="{% url 'home' %}">Блог</a>
                                 </li>
                                 <li class="nav-item border-secondary border-start border-end">
-                                    <a class="nav-link px-3{% if request.resolver_match.url_name == 'ml' %} active{% endif %}disabled" href="/ml">Сервисы</a>
+                                    <a class="nav-link px-3{% if request.resolver_match.url_name == 'ml' %} active{% endif %} disabled" href="/ml">Сервисы</a>
                                 </li>
                             </ul>
                         </div>
