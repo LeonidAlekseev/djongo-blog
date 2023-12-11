@@ -4,18 +4,18 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-CHOICES = dict(
-    category = (
-        (0, 'Обзоры'),
-        (1, 'Обсуждения'),
-        (2, 'Выступления'),
-        (3, 'Разработки'),
-    ),
-    status = (
-        (0, 'Черновик'),
-        (1, 'Опубликован'),
-    )
-)
+CHOICES = {
+    'category': {
+        0: 'Обзоры',
+        1: 'Обсуждения',
+        2: 'Выступления',
+        3: 'Разработки',
+    },
+    'status': {
+        0: 'Черновик',
+        1: 'Опубликован',
+    },
+}
 
 
 class Post(models.Model):
@@ -25,7 +25,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200)
     category = models.IntegerField(choices=CHOICES['category'], default=0)
-    content = models.TextField()
+    content = models.TextField(max_length=100000)
     status = models.IntegerField(choices=CHOICES['status'], default=0)
 
     class Meta:
@@ -39,5 +39,13 @@ class Post(models.Model):
     def updated_at_formatted(self):
         return self.updated_at.strftime('%H:%M | %d.%m.%Y')
 
+    @property
+    def category_name(self):
+        return CHOICES['category'][int(self.category)]
+
+    @property
+    def status_name(self):
+        return CHOICES['status'][int(self.status)]
+
     def __str__(self):
-        return self.title
+        return self.slug
