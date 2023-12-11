@@ -89,9 +89,6 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'ENFORCE_SCHEMA': bool(os.environ.get("MONGO_ENFORCE_SCHEMA", 1)),
-        'HOST': os.environ.get("MONGO_HOST", "mongodb"),
-        'PORT': int(os.environ.get("MONGO_PORT", 27017)),
         'NAME': os.environ.get("MONGO_NAME"),
         'CLIENT': {
             'host': f'{os.environ.get("MONGO_HOST")}/{os.environ.get("MONGO_NAME")}?retryWrites=true&w=majority'
