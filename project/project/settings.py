@@ -35,15 +35,16 @@ CSRF_TRUSTED_ORIGINS = os.environ.get("DJANGO_CSRF_TRUSTED_ORIGINS").split(" ")
 # Application definition
 
 INSTALLED_APPS = [
-    'core',
-    'blog',
-    'djongo',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'djongo',
+    'core',
+    'account',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -61,7 +62,11 @@ ROOT_URLCONF = 'project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
+        'DIRS': [
+            BASE_DIR / 'templates',
+            BASE_DIR / 'account' / 'templates',
+            BASE_DIR / 'blog' / 'templates',
+        ]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -138,7 +143,11 @@ STATIC_ROOT = BASE_DIR / 'static'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'core' / 'static',
+    BASE_DIR / 'account' / 'static',
     BASE_DIR / 'blog' / 'static',
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REGIRECT_URL = 'home'
+LOGOUT_REGIRECT_URL = 'home'
