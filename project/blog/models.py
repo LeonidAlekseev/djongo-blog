@@ -24,9 +24,9 @@ class Post(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200)
-    category = models.IntegerField(choices=CHOICES['category'], default=0)
+    category = models.IntegerField(choices=CHOICES['category'].items(), default=0)
     content = models.TextField(max_length=100000)
-    status = models.IntegerField(choices=CHOICES['status'], default=0)
+    status = models.IntegerField(choices=CHOICES['status'].items(), default=0)
 
     class Meta:
         ordering = ['-created_at']
