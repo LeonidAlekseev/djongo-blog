@@ -159,33 +159,29 @@ _Дополнительные примеры приведены в раздел�
 <!-- Дорожная карта -->
 ## Дорожная карта
 
-- [x] Конфигурация
+- [x] Configs
     - [x] Environment Docker
     - [x] Environment MongoDB
     - [x] Environment Project
     - [x] Environment Nginx
-- [x] Контейнеризация
+- [x] Containers
     - [x] Docker MongoDB
     - [x] Docker Project
     - [x] Docker Nginx
     - [x] Docker Compose
-- [ ] Разработка блога
+- [ ] Blog
     - [x] Main page
     - [x] Admin panel
     - [x] Pagination
     - [x] Translator
-    - [ ] Authorization
-    - [ ] Registration
-        - [ ] Ajax
-    - [ ] Authentication
-        - [ ] Ajax
+    - [x] Authorization
+    - [x] Registration
+    - [x] Authentication
     - [ ] Search
-        - [ ] Ajax
     - [ ] Account
         - [ ] Full Name
         - [ ] Avatar
-        - [ ] Edit
-- [ ] Машинное обучение
+- [ ] Services
     - [ ] Recurrent Neural Network
         - [ ] Process data
         - [ ] Model training
