@@ -178,9 +178,9 @@ _Дополнительные примеры приведены в раздел�
     - [x] Registration
     - [x] Authentication
     - [ ] Search
-    - [ ] Account
-        - [ ] Full Name
-        - [ ] Avatar
+    - [x] Account
+        - [x] Full Name
+        - [x] Avatar
 - [ ] Services
     - [ ] Recurrent Neural Network
         - [ ] Process data
