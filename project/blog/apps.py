@@ -11,19 +11,19 @@ def create_default_permissions(sender, **kwargs):
     # editor_group, created = Group.objects.get_or_create(name='Editor')
     publisher_group, created = Group.objects.get_or_create(name='Publisher')
 
-    content_type = ContentType.objects.get_for_model(Post)
-    post_permission = Permission.objects.filter(content_type=content_type)
-
-    for perm in post_permission:
-        if perm.codename == 'delete_post':
-            publisher_group.permissions.add(perm)
-        elif perm.codename == 'change_post':
-            # editor_group.permissions.add(perm)
-            publisher_group.permissions.add(perm)
-        else:
-            # author_group.permissions.add(perm)
-            # editor_group.permissions.add(perm)
-            publisher_group.permissions.add(perm)
+    if created:
+        content_type = ContentType.objects.get_for_model(Post)
+        post_permission = Permission.objects.filter(content_type=content_type)
+        for perm in post_permission:
+            if perm.codename == 'delete_post':
+                publisher_group.permissions.add(perm)
+            elif perm.codename == 'change_post':
+                # editor_group.permissions.add(perm)
+                publisher_group.permissions.add(perm)
+            else:
+                # author_group.permissions.add(perm)
+                # editor_group.permissions.add(perm)
+                publisher_group.permissions.add(perm)
 
 
 class BlogConfig(AppConfig):
