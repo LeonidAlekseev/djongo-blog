@@ -36,7 +36,7 @@ class TrainCatboostRegressor(APIView):
             x_train = [v[:-1] for v in dataset]
             y_train = [v[-1] for v in dataset]
             
-            model = CatBoostRegressor(random_seed=seed, silent=True)
+            model = CatBoostRegressor(random_seed=seed, silent=True, allow_writing_files=False)
             model.fit(
                 x_train,
                 y_train,
