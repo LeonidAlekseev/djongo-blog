@@ -7,4 +7,4 @@ from .forms import UserRegistrationForm
 class UserRegisterView(generic.CreateView):
     form_class = UserRegistrationForm
     template_name = 'registration/register.html'
-    success_url = reverse_lazy('login')
+    # success_url = reverse_lazy('login') # desable for modal
