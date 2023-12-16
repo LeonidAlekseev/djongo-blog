@@ -1,6 +1,5 @@
 from django.conf import settings
 from django.db import models
-from djongo.storage import GridFSStorage
 from django.dispatch import receiver
 from django.contrib.auth.models import Group, User
 
