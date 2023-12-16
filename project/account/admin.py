@@ -10,7 +10,7 @@ class ProfileAdmin(admin.ModelAdmin):
     def avatar_display(self, obj):
         if obj.avatar:
             return mark_safe(f'<img src="{obj.avatar.url}" width="50px" />')
-        return 'No avatar'
+        return mark_safe(f'<img src="/static/account/avatar/default.jpg" width="50px" />')
         
     avatar_display.short_description = 'Avatar'
 

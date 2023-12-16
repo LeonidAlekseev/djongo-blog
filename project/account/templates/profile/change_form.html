@@ -1,11 +1,13 @@
 {% extends "admin/change_form.html" %}
 
 {% block field_sets %}
-    {% if original.avatar %}
-        <div>
-            <h2>Avatar</h2>
+    <div>
+        <h2>Avatar</h2>
+        {% if original.avatar %}
             <img src="{{ original.avatar.url }}" alt="Avatar" style="max-width: 200px; max-height: 200px;">
-        </div>
-    {% endif %}
+        {% else %}
+            <img src="/static/account/avatar/default.jpg" width="50px" />
+        {% endif %}
+    </div>
     {{ block.super }}
 {% endblock %}
