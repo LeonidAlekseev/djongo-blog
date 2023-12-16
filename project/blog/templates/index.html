@@ -11,12 +11,12 @@
                         <h3 class="mb-0 blog-title display-6 h-bold">{{ post.title }}</h3>
                         <div class="mb-3 text-muted text-uppercase">{{ post.created_at_formatted }}</div>
                         <p class="blog-body text-justify card-text mb-auto">{{ post.content|slice:":200" }}</p>
-                        <a href="{% url 'post' post.slug  %}" class="btn btn-primary">Читать подробнее &rarr;</a>
+                        <a href="{% url 'post' post.slug  %}">Читать подробнее &rarr;</a>
                     </div>
                 </div>
             </div>
         {% empty %}
-            <div>Не найдено</div>
+            <div class="m-0 py-3">Не найдено</div>
         {% endfor %}
     </div>
 </div>
