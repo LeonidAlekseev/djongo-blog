@@ -251,3 +251,43 @@ time.title {
 span.seach-highlight {
     background-color: #FF964F;
 }
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+}
+.overlay-popup {
+    width: 100vw !important;
+    height: 100vh !important;
+    top: 40px !important;
+    left: 0px !important;
+    position: fixed;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    z-index: 1000000 !important;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.window-popup {
+    position: relative;
+    margin: auto 0 !important;
+    background: white;
+    box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.5);
+}
+.window-popup .close-popup {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.window-popup .form-input{
+    display: flex;
+    flex-direction: column;
+}
+#train .form-input, #predict .form-input {
+    display: flex;
+    flex-direction: column;
+}

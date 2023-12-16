@@ -21,7 +21,7 @@ class PostList(generic.ListView):
 
         return queryset
 
-models.Q
+
 class PostDetail(generic.DetailView):
     model = Post
     template_name = 'post.html'

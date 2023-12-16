@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'api',
     'account',
     'blog',
+    'ml',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +69,7 @@ TEMPLATES = [
             BASE_DIR / 'templates',
             BASE_DIR / 'account' / 'templates',
             BASE_DIR / 'blog' / 'templates',
+            BASE_DIR / 'ml' / 'templates',
         ]
         ,
         'APP_DIRS': True,
@@ -149,6 +151,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'core' / 'static',
     BASE_DIR / 'blog' / 'static',
     BASE_DIR / 'account' / 'static',
+    BASE_DIR / 'ml' / 'static',
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

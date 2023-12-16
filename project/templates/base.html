@@ -30,44 +30,6 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js">
     </script>
     <link href="/static/blog/main.css" rel="stylesheet">
-    <style>
-        .form-popup {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            right: 15px;
-            border: 3px solid #f1f1f1;
-        }
-        .overlay-popup {
-            width: 100vw !important;
-            height: 100vh !important;
-            top: 40px !important;
-            left: 0px !important;
-            position: fixed;
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            z-index: 1000000 !important;
-            background: rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-        .window-popup {
-            position: relative;
-            margin: auto 0 !important;
-            background: white;
-            box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.5);
-        }
-        .window-popup .close-popup {
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-        .window-popup .form-input{
-            display: flex;
-            flex-direction: column;
-        }
-    </style>
 </head>
 
 <body class="body-width" cz-shortcut-listen="true">
@@ -87,7 +49,7 @@
                                     <a class="nav-link px-3{% if request.resolver_match.url_name == 'home' %} active{% endif %}" href="{% url 'home' %}">Блог</a>
                                 </li>
                                 <li class="nav-item border-secondary border-start border-end">
-                                    <a class="nav-link px-3{% if request.resolver_match.url_name == 'ml' %} active{% endif %} disabled" href="/ml">Сервисы</a>
+                                    <a class="nav-link px-3{% if request.resolver_match.url_name == 'ml' %} active{% endif %}" href="{% url 'catboost' %}">КатБуст</a>
                                 </li>
                             </ul>
                         </div>

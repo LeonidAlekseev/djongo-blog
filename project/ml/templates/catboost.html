@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="row my-3">
+        <div id="train">
+            <h3>Train</h3>
+            <form id="form-train" class="m-0" onsubmit="event.preventDefault(); trainRequest();">
+                <div class="form-input">
+                    <label for="id_seed">Seed:</label>
+                    <input type="text" name="seed" autofocus="" autocapitalize="none" maxlength="32" required id="id_seed" value="1">
+                </div>
+                <button class="btn btn-secondary mt-3">Train</button>
+            </form>
+            <p id="train_response"></p>
+        </div>
+        <script>
+            function trainRequest() {
+                let form = document.querySelector('#form-train');
+                let formData = new FormData(form);
+
+                var data = {};
+                for (var [key, value] of formData.entries()) { 
+                    data[key] = value;
+                }
+                data = JSON.stringify(data);
+
+                var xhr = new XMLHttpRequest();
+                var url = '/api/regression/catboost/train/';
+                xhr.open("POST", url, true);
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.send(data);
+            
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === XMLHttpRequest.DONE) {
+                        if (xhr.status === 200) {
+                            document.querySelector("#train_response").innerHTML = xhr.responseText;
+                        } else {
+                            document.querySelector("#train_response").innerHTML = `Ошибка запроса: ${xhr.status}`;
+                        }
+                    }
+                };
+            }
+        </script>
+    </div>
+    <div class="row my-3">
+        <div id="predict">
+            <h3>Predict</h3>
+            <form id="form-predict" class="m-0" onsubmit="event.preventDefault(); predictRequest();">
+                <div class="form-input">
+                    <label for="id_age">Age:</label>
+                    <input type="text" name="age" autofocus="" autocapitalize="none" maxlength="32" required id="id_age" value="19">
+                    <label for="id_sex">Sex:</label>
+                    <input type="text" name="sex" autofocus="" autocapitalize="none" maxlength="32" required id="id_sex" value="female">
+                    <label for="id_bmi">BMI:</label>
+                    <input type="text" name="bmi" autofocus="" autocapitalize="none" maxlength="32" required id="id_bmi" value="27.9">
+                    <label for="id_children">Children:</label>
+                    <input type="text" name="children" autofocus="" autocapitalize="none" maxlength="32" required id="id_children" value="0">
+                    <label for="id_smoker">Smoker:</label>
+                    <input type="text" name="smoker" autofocus="" autocapitalize="none" maxlength="32" required id="id_smoker" value="yes">
+                    <label for="id_region">Region:</label>
+                    <input type="text" name="region" autofocus="" autocapitalize="none" maxlength="32" required id="id_region" value="southwest">
+                </div>
+                <button class="btn btn-secondary mt-3">Predict</button>
+            </form>
+            <p id="predict_response"></p>
+        </div>
+        <script>
+            function predictRequest() {
+                let form = document.querySelector('#form-predict');
+                let formData = new FormData(form);
+
+                var data = {};
+                for (var [key, value] of formData.entries()) { 
+                    data[key] = value;
+                }
+                data['age'] = parseInt(data['age']);
+                data['bmi'] = parseFloat(data['bmi']);
+                data['children'] = parseInt(data['children']);
+                data = JSON.stringify(data);
+
+                var xhr = new XMLHttpRequest();
+                var url = '/api/regression/catboost/predict/';
+                xhr.open("POST", url, true);
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.send(data);
+            
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === XMLHttpRequest.DONE) {
+                        if (xhr.status === 200) {
+                            document.querySelector("#predict_response").innerHTML = xhr.responseText;
+                        } else {
+                            document.querySelector("#predict_response").innerHTML = `Ошибка запроса: ${xhr.status}`;
+                        }
+                    }
+                };
+            }
+        </script>
+    </div>
+    <div class="row my-3">
+        <div id="dataset">
+            <h3>Dataset</h3>
+            <button class="btn btn-secondary mt-3" onclick="datasetRequest()">Dataset</button>
+            <p id="dataset_response"></p>
+        </div>
+        <script>
+            function datasetRequest() {
+                var xhr = new XMLHttpRequest();
+                var url = '/api/regression/catboost/dataset/';
+                xhr.open("GET", url, true);
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.send();
+            
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState === XMLHttpRequest.DONE) {
+                        if (xhr.status === 200) {
+                            document.querySelector("#dataset_response").innerHTML = xhr.responseText;
+                        } else {
+                            document.querySelector("#dataset_response").innerHTML = `Ошибка запроса: ${xhr.status}`;
+                        }
+                    }
+                };
+            }
+        </script>
+    </div>
+</div>
+{% endblock content %}
