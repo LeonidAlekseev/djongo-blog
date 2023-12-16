@@ -24,12 +24,14 @@
                 for (var [key, value] of formData.entries()) { 
                     data[key] = value;
                 }
+                var csrf_token = data["csrfmiddlewaretoken"];
                 data = JSON.stringify(data);
 
                 var xhr = new XMLHttpRequest();
                 var url = '/api/regression/catboost/train/';
                 xhr.open("POST", url, true);
                 xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.setRequestHeader("X-CSRFToken", csrf_token);
                 xhr.send(data);
             
                 xhr.onreadystatechange = function () {
@@ -76,6 +78,7 @@
                 for (var [key, value] of formData.entries()) { 
                     data[key] = value;
                 }
+                var csrf_token = data["csrfmiddlewaretoken"];
                 data['age'] = parseInt(data['age']);
                 data['bmi'] = parseFloat(data['bmi']);
                 data['children'] = parseInt(data['children']);
@@ -85,6 +88,7 @@
                 var url = '/api/regression/catboost/predict/';
                 xhr.open("POST", url, true);
                 xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.setRequestHeader("X-CSRFToken", csrf_token);
                 xhr.send(data);
             
                 xhr.onreadystatechange = function () {
