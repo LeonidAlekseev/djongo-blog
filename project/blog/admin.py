@@ -6,7 +6,7 @@ class PostAdmin(admin.ModelAdmin):
     list_display = ('status', 'author', 'title', 'slug', 'created_at', 'updated_at',)
     list_filter = ('status',)
     search_fields = ('title', 'content', 'author',)
-    prepopulated_fields = {'slug': ('title', 'author',)}
+    prepopulated_fields = {'slug': ('title',)}
 
 
 admin.site.register(Post, PostAdmin)
