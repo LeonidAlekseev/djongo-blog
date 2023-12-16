@@ -211,10 +211,10 @@
                                 </ul>
                             </div>
                             <div>
-                                <form class="nav-bg-gray75 h-100 m-0">
+                                <form class="nav-bg-gray75 h-100 m-0" action="{% url 'home' %}">
                                     <div class="d-flex">
                                         <div>
-                                            <input class="nav-search nav-flat px-3 text-white placeholder-white" type="text" placeholder="Поиск">
+                                            <input class="nav-search nav-flat px-3 text-white placeholder-white" type="text" name="search" placeholder="Поиск">
                                         </div>
                                         <div>
                                             <button class="nav-flat px-3 text-white" type="submit">
