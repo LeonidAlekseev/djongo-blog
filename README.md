@@ -169,16 +169,21 @@ _Дополнительные примеры приведены в раздел�
     - [x] Docker Project
     - [x] Docker Nginx
     - [x] Docker Compose
-- [ ] Blog
-    - [x] Main page
+- [x] Blog
+    - [x] Home page
     - [x] Admin panel
     - [x] Pagination
     - [x] Translator
-    - [x] Authorization
-    - [x] Registration
+      - [x] Customization
     - [x] Authentication
-    - [ ] Search
-    - [x] Account
+        - [x] Permissions
+        - [x] Groups
+    - [x] Authorization
+        - [x] Popup
+    - [x] Registration
+        - [x] Popup
+    - [x] Search
+    - [x] Profile
         - [x] Full Name
         - [x] Avatar
 - [ ] Services

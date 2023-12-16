@@ -26,146 +26,9 @@
     <script 
         src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js">
     </script>
-
-    <style>
-        @charset "UTF-8";
-        @font-face{font-family:TimesDigitalW04-Regular;src:url(/static/core/fonts/TimesDigitalW04-Regular.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
-        @font-face{font-family:TimesDigitalW04-Regular-fallback;font-display:swap;font-style:normal;font-weight:400;src:local("Times New Roman");ascent-override:87.46%;descent-override:28.13%;line-gap-override:0;size-adjust:113.42%}
-        @font-face{font-family:TimesModern-Bold;src:url(/static/core/fonts/TimesModern-Bold.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
-        @font-face{font-family:TimesModern-Bold-fallback;font-display:swap;font-style:normal;font-weight:700;src:local("Times New Roman Bold");ascent-override:73.8%;descent-override:18.26%;line-gap-override:6.9%;size-adjust:94.18%}
-        @font-face{font-family:TimesModern-Regular;src:url(/static/core/fonts/TimesModern-Regular.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
-        @font-face{font-family:TimesModern-Regular-fallback;font-display:swap;font-style:normal;font-weight:400;src:local("Times New Roman");ascent-override:71.84%;descent-override:17.78%;line-gap-override:6.72%;size-adjust:96.74%}
-        :root {
-            --bs-primary-rgb: 21, 115, 162;
-            --bs-secondary-rgb: 78, 77, 85;
-            --bs-link-color: #1573a2;
-            --bs-link-hover-color: #0c5478;
-        }
-        .navbar-dark {
-            --bs-navbar-hover-color: #ffffff;
-            --bs-navbar-disabled-color: #ffffff;
-        }
-        html {
-            background-color: #f5efeb;
-        }
-        body {
-            width: fit-content;
-            background: white;
-            border-left: 1px solid rgba(219,219,219,.5);
-            border-right: 1px solid rgba(219,219,219,.5);
-            font-family: TimesModern-Regular,TimesModern-Regular-fallback,serif;
-            position: static !important;
-            top: 0 !important;
-        }
-        .skiptranslate > iframe {
-            top: auto!important;
-            bottom: 0!important;
-        }
-        .body-width {
-            max-width: 1140px;
-            width: 100vw;
-            margin: auto;
-        }
-        h1, h2, h3, h4, h5, h6, .h-bold {
-            font-family: TimesModern-Bold,TimesModern-Bold-fallback,serif;
-        }
-        textarea:focus, input:focus{
-            outline: none;
-        }
-        a {
-            text-decoration: none !important;
-        }
-        .nav-bg-gray75, .nav-link.active {
-            background: rgb(var(--bs-secondary-rgb));
-        }
-        time.title {
-            letter-spacing: 1.2px;
-        }
-        .h-title {
-            font-size: 64px;
-            line-height: 78px;
-        }
-        .text-justify {
-            text-align: justify;
-        }
-        .text-gray50 {
-            color: #333 !important;
-        }
-        .text-white-imp {
-            color: #ffffff !important;
-        }
-        .nav-flat {
-            border: 0;
-            height: 40px;
-            line-height: 40px;
-            background: transparent;
-        }
-        .nav-item a {
-            color: #ffffff;
-        }
-        .nav-item:hover {
-            background: #ffffff;
-        }
-        .nav-item:not(.nav-focus):hover a:not(.active) {
-            color: var(--bs-body-color);
-        }
-        .nav-focus {
-            background: var(--bs-link-color);
-        }
-        .nav-focus:hover {
-            background: var(--bs-link-hover-color);
-        }
-        .nav-search {
-            width: 100px;
-        }
-        .placeholder-white::placeholder {
-            color: #ffffff;
-            opacity: 1;
-        }
-        .placeholder-white:-ms-input-placeholder {
-            color: #ffffff;
-        }
-        .placeholder-white::-ms-input-placeholder {
-            color: #ffffff;
-        }
-        .h-100-device {
-            min-height: 100vh;
-        }
-        .bg-dark {
-            background: #000;
-        }
-        .bg-gray80 {
-            background: #3c3f44;
-        }
-        .bg-gray90 {
-            background: #1A1F24;
-        }
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-            font-size: 3.5rem;
-            }
-        }
-        .bg-animation {
-            background-image: url(/static/blog/title-animation.gif);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center center;
-        }
-        .bg-animation-filter {
-            backdrop-filter: blur(3px) brightness(0.33);
-            -webkit-backdrop-filter: blur(3px) brightness(0.33);
-        }
-        .pagination-element {
-            padding: 10px;
-        }
-    </style>
+    <script 
+        src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js">
+    </script>
     <link href="/static/blog/main.css" rel="stylesheet">
 </head>
 
@@ -298,11 +161,30 @@
             src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
         </script>
         <script>
+            var instance = new Mark(document.body);
+            function searchHighlight(text) {
+                instance.unmark();
+                instance.mark(text, {
+                    "element": "span",
+                    "className": "seach-highlight"
+                });
+            }
+            var searchInput = document.querySelector("#nav-search");
+            searchInput.addEventListener('input', function() {
+                var searchInputValue = searchInput.value;
+                if (searchInputValue.length >= 3) {
+                    searchHighlight(searchInputValue);
+                } else {
+                    instance.unmark();
+                }
+            });
+
             const URLParams = new URLSearchParams(window.location.search);
             var searchParam = URLParams.get('search');
             if (searchParam !== null) {
-                document.querySelector("#nav-search").value = searchParam;
+                searchInput.value = searchParam;
             }
+
             (function() {
                 var days = ['Воскресенье','Понедельник','Вторник', 'Среда', 'Четверг','Пятница','Суббота'];
                 var months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
