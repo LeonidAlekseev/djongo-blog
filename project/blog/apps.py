@@ -2,10 +2,12 @@ from django.apps import AppConfig, apps
 from django.db.models.signals import post_migrate
 
 
-def create_default_permissions(sender, **kwargs):
+def add_permissions(sender, **kwargs):
     from django.contrib.auth.models import Group, Permission
     from django.contrib.contenttypes.models import ContentType
+    from account.models import Profile
     from blog.models import Post
+
 
     # author_group, created = Group.objects.get_or_create(name='Author')
     # editor_group, created = Group.objects.get_or_create(name='Editor')
@@ -31,4 +33,4 @@ class BlogConfig(AppConfig):
     name = 'blog'
 
     def ready(self):
-        post_migrate.connect(create_default_permissions, sender=self)
+        post_migrate.connect(add_permissions, sender=self)

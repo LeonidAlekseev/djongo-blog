@@ -12,7 +12,7 @@ def user_directory_path(instance, filename):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    avatar = models.ImageField(upload_to='user_directory_path')
+    avatar = models.ImageField(upload_to=user_directory_path)
     first_name = models.CharField(max_length=200, blank=True, null=True)
     last_name = models.CharField(max_length=200, blank=True, null=True)
     father_name = models.CharField(max_length=200, blank=True, null=True)
@@ -24,7 +24,9 @@ class Profile(models.Model):
 @receiver(models.signals.post_save, sender=User)
 def user_created(sender, instance, created, **kwargs):
     if created:
+        user_group = Group.objects.get(name='User')
+        instance.groups.add(user_group)
         publisher_group = Group.objects.get(name='Publisher')
         instance.groups.add(publisher_group)
-        instance.is_staff = True
+        instance.is_staff = True # admin panel view permission
         instance.save()
