@@ -14,5 +14,20 @@ class ProfileAdmin(admin.ModelAdmin):
         
     avatar_display.short_description = 'Avatar'
 
+    def get_queryset(self, request):
+        qs = super().get_queryset(request)
+        if not request.user.is_superuser:
+            qs = qs.filter(user=request.user)  # Фильтруем объекты по текущему пользователю
+        return qs
+
+    def has_change_permission(self, request, obj=None):
+        if request.user.is_superuser or not obj:
+            return True
+        return obj.user == request.user  # Разрешить редактирование только своего профиля
+
+    def has_delete_permission(self, request, obj=None):
+        if request.user.is_superuser:
+            return True
+
 
 admin.site.register(Profile, ProfileAdmin)
