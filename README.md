@@ -187,12 +187,12 @@ _Дополнительные примеры приведены в раздел�
         - [x] Full Name
         - [x] Avatar
 - [ ] Services
-    - [ ] Recurrent Neural Network
-        - [ ] Process data
-        - [ ] Model training
-        - [ ] Building pipeline
-        - [ ] Integration
-    - [ ] Spiking Neural Network
+    - [x] CatBoost
+        - [x] Process data
+        - [x] Model training
+        - [x] Building pipeline
+        - [x] Integration
+    - [ ] Spiking NN
         - [ ] Data processing
         - [ ] Model training
         - [ ] Building pipeline
