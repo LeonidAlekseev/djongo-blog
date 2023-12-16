@@ -5,6 +5,7 @@ from .models import Post
 
 class PostList(generic.ListView):
     template_name = 'index.html'
+    paginate_by = 6
 
     def get_queryset(self):
         search_post = self.request.GET.get('search')
@@ -25,4 +26,3 @@ class PostList(generic.ListView):
 class PostDetail(generic.DetailView):
     model = Post
     template_name = 'post.html'
-    paginate_by = 6
