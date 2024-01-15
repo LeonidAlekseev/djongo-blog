@@ -140,9 +140,11 @@ body {
     position: static !important;
     top: 0 !important;
 }
-.skiptranslate > iframe {
-    top: auto!important;
-    bottom: 0!important;
+.skiptranslate {
+    display: none !important;
+}
+.language_flag {
+    cursor: pointer;
 }
 .body-width {
     max-width: 1140px;
