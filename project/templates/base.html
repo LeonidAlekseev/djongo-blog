@@ -49,7 +49,10 @@
                                     <a class="nav-link px-3{% if request.resolver_match.url_name == 'home' %} active{% endif %}" href="{% url 'home' %}">Блог</a>
                                 </li>
                                 <li class="nav-item border-secondary border-start border-end">
-                                    <a class="nav-link px-3{% if request.resolver_match.url_name == 'ml' %} active{% endif %}" href="{% url 'catboost' %}">КатБуст</a>
+                                    <a class="nav-link px-3{% if request.resolver_match.url_name == 'ml' %} active{% endif %}" href="{% url 'catboost' %}">Катбуст</a>
+                                </li>
+                                <li class="nav-item border-secondary border-start border-end">
+                                    <a class="nav-link px-3{% if request.resolver_match.url_name == 'ml' %} active{% endif %}" href="{% url 'snntorch' %}">Импульсная сеть</a>
                                 </li>
                             </ul>
                         </div>

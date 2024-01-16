@@ -7,3 +7,10 @@ class CatBoost(generic.View):
 
     def get(self, request, *args, **kwargs):
         return render(request, self.template_name)
+
+
+class SNNTorch(generic.View):
+    template_name = 'snntorch.html'
+
+    def get(self, request, *args, **kwargs):
+        return render(request, self.template_name)

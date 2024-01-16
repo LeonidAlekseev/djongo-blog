@@ -10,6 +10,14 @@
                 <div class="form-input">
                     <label for="id_seed">Seed:</label>
                     <input type="text" name="seed" autofocus="" autocapitalize="none" maxlength="32" required id="id_seed" value="1">
+                    <label for="id_timesteps">Timesteps:</label>
+                    <input type="text" name="timesteps" autofocus="" autocapitalize="none" maxlength="32" required id="id_timesteps" value="50">
+                    <label for="id_hidden_layer">Hidden Layer:</label>
+                    <input type="text" name="hidden_layer" autofocus="" autocapitalize="none" maxlength="32" required id="id_hidden_layer" value="128">
+                    <label for="id_max_iteraions">Max Iteraions:</label>
+                    <input type="text" name="max_iteraions" autofocus="" autocapitalize="none" maxlength="32" required id="id_max_iteraions" value="150">
+                    <label for="id_learning_rate">Learning Rate:</label>
+                    <input type="text" name="learning_rate" autofocus="" autocapitalize="none" maxlength="32" required id="id_learning_rate" value="0.001">
                 </div>
                 <button class="btn btn-secondary mt-3">Train</button>
             </form>
@@ -30,7 +38,7 @@
                 data = JSON.stringify(data);
 
                 var xhr = new XMLHttpRequest();
-                var url = '/api/regression/catboost/train/';
+                var url = '/api/regression/snntorch/train/';
                 xhr.open("POST", url, true);
                 xhr.setRequestHeader("Content-Type", "application/json");
                 xhr.setRequestHeader("X-CSRFToken", csrf_token);
@@ -40,6 +48,7 @@
                     if (xhr.readyState === XMLHttpRequest.DONE) {
                         if (xhr.status === 200) {
                             document.querySelector("#train_response").innerHTML = JSON.stringify(JSON.parse(xhr.responseText), undefined, 2);
+                            document.querySelector("#train_response").outerHTML += `<img src="data:image/png;base64, ${JSON.parse(xhr.responseText).untrained_model_jpg_bytes}" style="width: 100%;"><img src="data:image/png;base64, ${JSON.parse(xhr.responseText).trained_model_jpg_bytes}" style="width: 100%;">`
                         } else {
                             document.querySelector("#train_response").innerHTML = `Ошибка запроса: ${xhr.status}`;
                         }
@@ -54,18 +63,8 @@
             <form id="form-predict" class="m-0" onsubmit="event.preventDefault(); predictRequest();">
                 {% csrf_token %}
                 <div class="form-input">
-                    <label for="id_age">Age:</label>
-                    <input type="text" name="age" autofocus="" autocapitalize="none" maxlength="32" required id="id_age" value="19">
-                    <label for="id_sex">Sex:</label>
-                    <input type="text" name="sex" autofocus="" autocapitalize="none" maxlength="32" required id="id_sex" value="female">
-                    <label for="id_bmi">BMI:</label>
-                    <input type="text" name="bmi" autofocus="" autocapitalize="none" maxlength="32" required id="id_bmi" value="27.9">
-                    <label for="id_children">Children:</label>
-                    <input type="text" name="children" autofocus="" autocapitalize="none" maxlength="32" required id="id_children" value="0">
-                    <label for="id_smoker">Smoker:</label>
-                    <input type="text" name="smoker" autofocus="" autocapitalize="none" maxlength="32" required id="id_smoker" value="yes">
-                    <label for="id_region">Region:</label>
-                    <input type="text" name="region" autofocus="" autocapitalize="none" maxlength="32" required id="id_region" value="southwest">
+                    <label for="id_features">Feature:</label>
+                    <input type="text" name="features" autofocus="" autocapitalize="none" maxlength="32" required id="id_features" value="0.10, 0.11, 0.12">
                 </div>
                 <button class="btn btn-secondary mt-3">Predict</button>
             </form>
@@ -83,13 +82,11 @@
                     data[key] = value;
                 }
                 var csrf_token = data["csrfmiddlewaretoken"];
-                data['age'] = parseInt(data['age']);
-                data['bmi'] = parseFloat(data['bmi']);
-                data['children'] = parseInt(data['children']);
+                data['features'] = data['features'].replace(/ /g,"").split(",").map(parseFloat);
                 data = JSON.stringify(data);
 
                 var xhr = new XMLHttpRequest();
-                var url = '/api/regression/catboost/predict/';
+                var url = '/api/regression/snntorch/predict/';
                 xhr.open("POST", url, true);
                 xhr.setRequestHeader("Content-Type", "application/json");
                 xhr.setRequestHeader("X-CSRFToken", csrf_token);
@@ -99,6 +96,7 @@
                     if (xhr.readyState === XMLHttpRequest.DONE) {
                         if (xhr.status === 200) {
                             document.querySelector("#predict_response").innerHTML = JSON.stringify(JSON.parse(xhr.responseText), undefined, 2);
+                            document.querySelector("#predict_response").outerHTML += `<img src="data:image/png;base64, ${JSON.parse(xhr.responseText).model_prediction_jpg_bytes}" style="width: 100%;">`
                         } else {
                             document.querySelector("#predict_response").innerHTML = `Ошибка запроса: ${xhr.status}`;
                         }
@@ -118,7 +116,7 @@
                 document.querySelector("#dataset_response").innerHTML = 'Запрос обрабтывается...'
 
                 var xhr = new XMLHttpRequest();
-                var url = '/api/regression/catboost/dataset/';
+                var url = '/api/regression/snntorch/dataset/';
                 xhr.open("GET", url, true);
                 xhr.setRequestHeader("Content-Type", "application/json");
                 xhr.send();
@@ -127,6 +125,7 @@
                     if (xhr.readyState === XMLHttpRequest.DONE) {
                         if (xhr.status === 200) {
                             document.querySelector("#dataset_response").innerHTML = JSON.stringify(JSON.parse(xhr.responseText), undefined, 2);
+                            document.querySelector("#dataset_response").outerHTML += `<img src="data:image/png;base64, ${JSON.parse(xhr.responseText).target_function_jpg_bytes}" style="width: 100%;">`
                         } else {
                             document.querySelector("#dataset_response").innerHTML = `Ошибка запроса: ${xhr.status}`;
                         }
