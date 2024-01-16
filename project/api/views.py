@@ -1,6 +1,7 @@
 import os
 import joblib
 import pandas as pd
+import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error
 from catboost import CatBoostRegressor
@@ -18,7 +19,7 @@ MODEL_NAME = 'CatboostRegressor_MedicalCostsDataset.pkl'
 MODEL_PATH = settings.BASE_DIR / 'api' / 'storage' / MODEL_NAME
 
 
-class MedicalCostsListAPIView(generics.ListAPIView):
+class MedicalCostsDatasetList(generics.ListAPIView):
     queryset = MedicalCostsDataset.objects.all()
     serializer_class = MedicalCostsDatasetSerializer
 
@@ -69,3 +70,5 @@ class PredictCatboostRegressor(APIView):
             })
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
