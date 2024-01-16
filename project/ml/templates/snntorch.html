@@ -22,6 +22,7 @@
                 <button class="btn btn-secondary mt-3">Train</button>
             </form>
             <pre id="train_response" style="margin: 1rem 0 0 0;"></pre>
+            <div id="train_visualize"></div>
         </div>
         <script>
             function trainRequest() {
@@ -48,7 +49,7 @@
                     if (xhr.readyState === XMLHttpRequest.DONE) {
                         if (xhr.status === 200) {
                             document.querySelector("#train_response").innerHTML = JSON.stringify(JSON.parse(xhr.responseText), undefined, 2);
-                            document.querySelector("#train_response").outerHTML += `<img src="data:image/png;base64, ${JSON.parse(xhr.responseText).untrained_model_jpg_bytes}" style="width: 100%;"><img src="data:image/png;base64, ${JSON.parse(xhr.responseText).trained_model_jpg_bytes}" style="width: 100%;">`
+                            document.querySelector("#train_visualize").innerHTML = `<img src="data:image/png;base64, ${JSON.parse(xhr.responseText).untrained_model_jpg_bytes}" style="width: 100%;"><img src="data:image/png;base64, ${JSON.parse(xhr.responseText).trained_model_jpg_bytes}" style="width: 100%;">`;
                         } else {
                             document.querySelector("#train_response").innerHTML = `Ошибка запроса: ${xhr.status}`;
                         }
@@ -69,6 +70,7 @@
                 <button class="btn btn-secondary mt-3">Predict</button>
             </form>
             <pre id="predict_response" style="margin: 1rem 0 0 0;"></pre>
+            <div id="predict_visualize"></div>
         </div>
         <script>
             function predictRequest() {
@@ -96,7 +98,7 @@
                     if (xhr.readyState === XMLHttpRequest.DONE) {
                         if (xhr.status === 200) {
                             document.querySelector("#predict_response").innerHTML = JSON.stringify(JSON.parse(xhr.responseText), undefined, 2);
-                            document.querySelector("#predict_response").outerHTML += `<img src="data:image/png;base64, ${JSON.parse(xhr.responseText).model_prediction_jpg_bytes}" style="width: 100%;">`
+                            document.querySelector("#predict_visualize").innerHTML = `<img src="data:image/png;base64, ${JSON.parse(xhr.responseText).model_prediction_jpg_bytes}" style="width: 100%;">`;
                         } else {
                             document.querySelector("#predict_response").innerHTML = `Ошибка запроса: ${xhr.status}`;
                         }
@@ -110,6 +112,7 @@
             <h3>Dataset</h3>
             <button class="btn btn-secondary mt-3" onclick="datasetRequest()">Load</button>
             <pre id="dataset_response" style="margin: 1rem 0 0 0;"></pre>
+            <div id="dataset_visualize"></div>
         </div>
         <script>
             function datasetRequest() {
@@ -125,7 +128,7 @@
                     if (xhr.readyState === XMLHttpRequest.DONE) {
                         if (xhr.status === 200) {
                             document.querySelector("#dataset_response").innerHTML = JSON.stringify(JSON.parse(xhr.responseText), undefined, 2);
-                            document.querySelector("#dataset_response").outerHTML += `<img src="data:image/png;base64, ${JSON.parse(xhr.responseText).target_function_jpg_bytes}" style="width: 100%;">`
+                            document.querySelector("#dataset_visualize").innerHTML = `<img src="data:image/png;base64, ${JSON.parse(xhr.responseText).target_function_jpg_bytes}" style="width: 100%;">`;
                         } else {
                             document.querySelector("#dataset_response").innerHTML = `Ошибка запроса: ${xhr.status}`;
                         }
